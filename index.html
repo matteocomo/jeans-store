@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="it" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jeans Store, boutique multibrand a Castiglioncello. Scopri le nostre collezioni e vieni a trovarci in Via Fucini 18."
+    />
+    <meta name="theme-color" content="#171716" />
+    <title>Jeans Store </title>
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="fontawesome/css/all.min.css"
+    />
+    <style>
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("assets/fonts/playfair-display-v40-latin-regular.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("assets/fonts/playfair-display-v40-latin-600.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("assets/fonts/playfair-display-v40-latin-700.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("assets/fonts/playfair-display-v40-latin-italic.woff2") format("woff2");
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Poppins";
+        src: url("assets/fonts/poppins-v24-latin-300.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Poppins";
+        src: url("assets/fonts/poppins-v24-latin-regular.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Poppins";
+        src: url("assets/fonts/poppins-v24-latin-500.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Poppins";
+        src: url("assets/fonts/poppins-v24-latin-600.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+      }
+      :root {
+        --ink: #171716;
+        --paper: #f7f5f1;
+        --sand: #b8977e;
+        --line: rgba(23, 23, 22, 0.14);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "Poppins", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .font-serif {
+        font-family: "Playfair Display", serif;
+      }
+      .topbar {
+        min-height: 38px;
+      }
+      .site-nav {
+        background: rgba(247, 245, 241, 0.88);
+        transition:
+          background 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .site-nav.scrolled {
+        background: rgba(247, 245, 241, 0.97);
+        box-shadow: 0 8px 30px rgba(23, 23, 22, 0.08);
+      }
+      @media (max-width: 767px) {
+        .site-nav {
+          transition:
+            background 0.25s ease,
+            box-shadow 0.25s ease;
+        }
+      }
+      .hero {
+        min-height: min(760px, calc(100vh - 38px));
+      }
+      .hero-video {
+        object-fit: cover;
+        object-position: center;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.68),
+          rgba(0, 0, 0, 0.22) 70%,
+          rgba(0, 0, 0, 0.38)
+        );
+      }
+      .eyebrow {
+        color: var(--sand);
+        letter-spacing: 0.22em;
+      }
+      .btn-primary,
+      .btn-light {
+        transition:
+          transform 0.25s ease,
+          background-color 0.25s ease,
+          color 0.25s ease;
+      }
+      .btn-primary {
+        background: var(--sand);
+        color: #fff;
+      }
+      .btn-primary:hover {
+        background: #a27f65;
+        transform: translateY(-2px);
+      }
+      .btn-light {
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        color: #fff;
+      }
+      .btn-light:hover {
+        background: #fff;
+        color: var(--ink);
+        transform: translateY(-2px);
+      }
+      .brand-track {
+        animation: marquee 28s linear infinite;
+        width: max-content;
+      }
+      .brand-track:hover {
+        animation-play-state: paused;
+      }
+      .brand-name {
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .info-card {
+        border-top: 2px solid var(--sand);
+      }
+      .map-frame {
+        min-height: 410px;
+        filter: none;
+      }
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        background: #f9f8f6 !important;
+        opacity: 1 !important;
+        isolation: isolate;
+        z-index: 9999;
+      }
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .brand-track {
+          animation: none;
+        }
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <a
+      href="https://wa.me/393456413731?text=Ciao%20Jeans%20Store%2C%20vorrei%20avere%20informazioni."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contattaci su WhatsApp"
+      class="fixed bottom-5 right-5 z-[70] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-3xl text-white shadow-[0_10px_28px_rgba(37,211,102,.3)] transition-transform duration-300 hover:-translate-y-1"
+    >
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    <button
+      id="backToTop"
+      type="button"
+      class="fixed bottom-24 right-5 z-[70] hidden h-11 w-11 items-center justify-center rounded-full bg-[#1A1A1A] text-white shadow-[0_10px_28px_rgba(23,23,22,.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#B8977E]"
+      aria-label="Torna in cima"
+      title="Torna in cima"
+    >
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <header>
+      <div
+        class="topbar bg-[#171716] px-5 py-2 text-[10px] uppercase tracking-[.16em] text-gray-300 sm:text-xs"
+      >
+        <div
+          class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-1"
+        >
+          <a
+            href="https://maps.google.com/?q=Via+Fucini+18+Castiglioncello"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white"
+            ><i
+              class="fas fa-location-dot mr-2 text-[#B8977E]"
+              aria-hidden="true"
+            ></i
+            >Via Fucini 18, Castiglioncello (LI)</a
+          >
+          <div class="flex items-center gap-4">
+            <a href="tel:+390586760196" class="hover:text-white"
+              ><i class="fas fa-phone mr-1.5" aria-hidden="true"></i>0586
+              760196</a
+            ><a
+              href="https://www.instagram.com/jeansstore_castiglioncello"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram text-base" aria-hidden="true"></i></a
+            ><a
+              href="https://www.facebook.com/share/19MtBWbHtQ/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook text-base" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+      <nav
+        id="siteNav"
+        class="site-nav sticky top-0 z-50 border-b border-black/10"
+        aria-label="Navigazione principale"
+      >
+        <div
+          class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8"
+        >
+          <a
+            href="index.html"
+            class="font-serif text-2xl font-bold tracking-[.08em] sm:text-3xl"
+            >JEANS STORE</a
+          >
+          <div
+            class="hidden items-center gap-8 text-xs font-medium uppercase tracking-[.16em] md:flex"
+          >
+            <a href="index.html" class="hover:text-[#B8977E]">Home</a
+            ><a href="vetrina.html" class="text-[#B8977E]">Collezioni</a
+            ><a href="index.html#brand" class="hover:text-[#B8977E]">Brand</a
+            ><a href="index.html#contatti" class="hover:text-[#B8977E]">Contatti</a>
+          </div>
+          <button
+            id="mobileMenuButton"
+            type="button"
+            class="text-2xl md:hidden"
+            aria-label="Apri menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div
+          id="mobileMenu"
+          class="mobile-menu fixed right-0 top-0 z-[9999] flex h-full w-full flex-col justify-between bg-[#F9F8F6] p-7 shadow-2xl md:hidden"
+          aria-label="Menu mobile"
+          aria-hidden="true"
+        >
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-serif text-xl font-bold tracking-[.08em]">JEANS STORE</span>
+              <button
+                id="closeMobileMenu"
+                type="button"
+                class="text-2xl"
+                aria-label="Chiudi menu"
+              >
+                <i class="fas fa-times" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="mt-16 flex flex-col gap-7 font-serif text-3xl">
+              <a href="index.html" class="mobile-link">Home</a>
+              <a href="vetrina.html" class="mobile-link text-[#B8977E]">Collezioni</a>
+              <a href="index.html#brand" class="mobile-link">Brand</a>
+              <a href="index.html#contatti" class="mobile-link">Contatti</a>
+            </div>
+          </div>
+          <div class="border-t border-black/10 pt-6">
+            <p class="text-xs uppercase tracking-wider text-gray-500">Seguici</p>
+            <div class="mt-4 flex gap-5 text-xl">
+              <a href="https://www.instagram.com/jeansstore_castiglioncello" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/share/19MtBWbHtQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <main id="top">
+      <section
+        class="hero relative flex items-center overflow-hidden text-white"
+        aria-labelledby="hero-title"
+      >
+        <video
+          class="hero-video absolute inset-0 h-full w-full"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1920&q=85"
+          aria-hidden="true"
+        >
+          <source
+            src="https://videos.pexels.com/video-files/853801/853801-hd_1920_1080_30fps.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div
+          class="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:py-32"
+        >
+          <div class="max-w-2xl">
+            <h1
+              id="hero-title"
+              class="text-5xl font-semibold leading-[1.05] sm:text-7xl"
+            >
+              Il tuo stile,<br /><em>la nostra selezione.</em>
+            </h1>
+            <p
+              class="mt-7 max-w-lg text-base leading-relaxed text-white/80 sm:text-lg"
+            >
+              Capi scelti con cura, consulenza personale e il piacere di trovare
+              qualcosa che ti rappresenta davvero.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#mappa"
+                class="btn-light inline-flex items-center justify-center rounded-full px-7 py-3.5 text-xs font-semibold uppercase tracking-[.15em]"
+                >Vieni in Boutique
+                <i class="fas fa-arrow-down ml-3" aria-hidden="true"></i></a
+              ><a
+                href="vetrina.html"
+                class="btn-primary inline-flex items-center justify-center rounded-full px-7 py-3.5 text-xs font-semibold uppercase tracking-[.15em]"
+                >Guarda le Collezioni
+                <i class="fas fa-arrow-right ml-3" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="brand"
+        class="overflow-hidden bg-white py-16"
+        aria-labelledby="brand-title"
+      >
+        <div class="mx-auto max-w-7xl px-6 text-center sm:px-10">
+          <h2 id="brand-title" class="mt-3 text-4xl font-semibold sm:text-5xl">
+            I marchi che trovi da noi
+          </h2>
+          <p
+            class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-gray-500"
+          >
+            Marchi scelti per qualità, carattere e capacità di durare oltre una
+            stagione.
+          </p>
+        </div>
+        <div class="mt-12 overflow-hidden" aria-label="Brand rivenduti">
+          <div class="brand-track flex items-center gap-12 sm:gap-24">
+            <div
+              class="brand-name min-w-[190px] py-5 text-center font-serif text-2xl italic"
+            >
+              LIU JO
+            </div>
+            <div
+              class="brand-name min-w-[150px] py-5 text-center text-2xl font-semibold tracking-[.12em]"
+            >
+              TWINSET
+            </div>
+            <div
+              class="brand-name min-w-[150px] py-5 text-center font-serif text-2xl"
+            >
+              DIESEL
+            </div>
+            <div
+              class="brand-name min-w-[170px] py-5 text-center text-2xl font-semibold tracking-[.08em]"
+            >
+              PATRIZIA PEPE
+            </div>
+            <div
+              class="brand-name min-w-[190px] py-5 text-center font-serif text-2xl italic"
+            >
+              LIU JO
+            </div>
+            <div
+              class="brand-name min-w-[150px] py-5 text-center text-2xl font-semibold tracking-[.12em]"
+            >
+              TWINSET
+            </div>
+            <div
+              class="brand-name min-w-[150px] py-5 text-center font-serif text-2xl"
+            >
+              DIESEL
+            </div>
+            <div
+              class="brand-name min-w-[170px] py-5 text-center text-2xl font-semibold tracking-[.08em]"
+            >
+              PATRIZIA PEPE
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="boutique"
+        class="bg-[#F7F5F1] py-20 sm:py-28"
+        aria-labelledby="boutique-title"
+      >
+        <div
+          class="mx-auto grid max-w-7xl gap-12 px-6 sm:px-10 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-20"
+        >
+          <div>
+            <h2
+              id="boutique-title"
+              class="mt-4 text-4xl font-semibold leading-tight sm:text-5xl"
+            >
+              Non solo abbigliamento.<br /><em>Una forma di sentirsi.</em>
+            </h2>
+            <p class="mt-6 max-w-xl text-sm leading-7 text-gray-600">
+              Nel cuore di Castiglioncello trovi uno spazio dove ogni capo viene
+              scelto pensando a chi lo indosserà. Passa a trovarci: ti
+              aiutiamo a costruire un guardaroba autentico, versatile e tuo.
+            </p>
+            <a
+              href="#contatti"
+              class="mt-8 inline-flex items-center border-b border-[#B8977E] pb-2 text-xs font-semibold uppercase tracking-[.16em] hover:text-[#B8977E]"
+              >Conosci il negozio
+              <i class="fas fa-arrow-right ml-3" aria-hidden="true"></i
+            ></a>
+          </div>
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85"
+              alt="Interno luminoso di una boutique di abbigliamento"
+              class="h-[360px] w-full object-cover sm:h-[470px]"
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        id="contatti"
+        class="bg-white py-16 sm:py-20"
+        aria-labelledby="contact-title"
+      >
+        <div class="mx-auto grid max-w-7xl gap-12 px-6 sm:px-10 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:gap-24">
+          <div>
+            <h2 id="contact-title" class="mt-4 text-4xl font-semibold sm:text-5xl">Parliamo<br /><em>quando vuoi.</em></h2>
+            <div class="mt-9 divide-y divide-black/10 border-y border-black/10">
+              <a href="tel:+390586760196" class="flex items-center gap-4 py-4 text-sm text-[#1A1A1A] transition-colors hover:text-[#B8977E]">
+                <i class="fas fa-phone w-5 text-center text-[#B8977E]" aria-hidden="true"></i>
+                <span><span class="block text-[10px] uppercase tracking-[.16em] text-gray-500">Telefono fisso</span>0586 760196</span>
+              </a>
+              <a href="https://wa.me/393456413731" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 py-4 text-sm text-[#1A1A1A] transition-colors hover:text-[#B8977E]">
+                <i class="fab fa-whatsapp w-5 text-center text-lg text-[#B8977E]" aria-hidden="true"></i>
+                <span><span class="block text-[10px] uppercase tracking-[.16em] text-gray-500">WhatsApp Chat</span>Scrivici direttamente</span>
+              </a>
+              <a href="mailto:info@jeansstorecastiglioncello.it" class="flex items-center gap-4 py-4 text-sm text-[#1A1A1A] transition-colors hover:text-[#B8977E]">
+                <i class="fas fa-envelope w-5 text-center text-[#B8977E]" aria-hidden="true"></i>
+                <span><span class="block text-[10px] uppercase tracking-[.16em] text-gray-500">Email</span>info@jeansstorecastiglioncello.it</span>
+              </a>
+              <div class="flex items-center gap-4 py-4 text-sm text-[#1A1A1A]">
+                <i class="fas fa-share-nodes w-5 text-center text-[#B8977E]" aria-hidden="true"></i>
+                <span class="flex items-center gap-4"><span class="text-[10px] uppercase tracking-[.16em] text-gray-500">Social</span>
+                  <a href="https://www.instagram.com/jeansstore_castiglioncello" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-lg hover:text-[#B8977E]"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                  <a href="https://www.facebook.com/share/19MtBWbHtQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-lg hover:text-[#B8977E]"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-3xl bg-[#F9F8F6] p-8 sm:p-10">
+            <h3 class="mt-4 font-serif text-3xl font-semibold">Passa a trovarci.</h3>
+            <dl class="mt-7 space-y-3 text-sm text-gray-600">
+              <div class="flex justify-between gap-5"><dt>Tutti i giorni</dt><dd class="text-right">9:30 – 13:00<br />16:00 – 20:00</dd></div>
+            </dl>
+            <p class="mt-8 max-w-md text-sm leading-7 text-gray-600">Cerchi una taglia o vuoi sapere se è arrivato un nuovo capo? Scrivici su WhatsApp, ti aiutiamo volentieri.</p>
+            <a href="https://wa.me/393456413731" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center rounded-full bg-[#1A1A1A] px-6 py-3 text-xs font-semibold uppercase tracking-[.15em] text-white transition-colors hover:bg-[#B8977E]">Chiedi informazioni <i class="fab fa-whatsapp ml-3 text-base" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </section>
+      <section
+        id="mappa"
+        class="bg-white py-20 sm:py-28"
+        aria-labelledby="info-title"
+      >
+        <div class="mx-auto max-w-5xl px-6 text-center sm:px-10">
+          <h2 id="info-title" class="mt-4 text-4xl font-semibold sm:text-5xl">
+            Via Fucini 18<br /><em>Castiglioncello (LI).</em>
+          </h2>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=Via+Fucini+18%2C+Castiglioncello"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 inline-block text-xs font-semibold uppercase tracking-wider text-[#B8977E]"
+            >Indicazioni stradali
+            <i
+              class="fas fa-arrow-up-right-from-square ml-1"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </div>
+        <div class="mx-auto mt-10 max-w-7xl px-6 sm:px-10">
+          <div id="mapContainer" class="map-frame relative min-h-[410px] overflow-hidden bg-[#F9F8F6] text-center shadow-[inset_0_0_0_1px_rgba(23,23,22,.08)] sm:min-h-[520px]">
+            <div id="mapConsentOverlay" class="absolute inset-0 flex flex-col items-center justify-center px-6 py-12 sm:px-10">
+              <i class="fas fa-map-location-dot text-4xl text-[#B8977E]" aria-hidden="true"></i>
+              <p class="mt-6 text-xs font-semibold uppercase tracking-[.2em] text-[#B8977E]">Mappa interattiva</p>
+              <h3 class="mt-3 font-serif text-3xl font-semibold sm:text-4xl">Jeans Store Castiglioncello</h3>
+              <p class="mt-3 max-w-md text-sm leading-7 text-gray-600">Per visualizzare la mappa interattiva devi consentire il caricamento di contenuti Google Maps.</p>
+              <button
+                id="mapConsentButton"
+                type="button"
+                class="btn-primary mt-8 inline-flex items-center rounded-full px-6 py-3.5 text-xs font-semibold uppercase tracking-[.15em]"
+              >
+                Visualizza Mappa Interattiva
+                <i class="fas fa-map ml-3" aria-hidden="true"></i>
+              </button>
+              <p class="mt-4 text-[11px] leading-5 text-gray-500">Consulta la <a href="privacy.html" class="underline underline-offset-2 hover:text-[#B8977E]">Privacy Policy</a> per maggiori informazioni.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="scrivici"
+        class="bg-[#171716] py-20 text-white sm:py-28"
+        aria-labelledby="contact-title"
+      >
+        <div
+          class="mx-auto grid max-w-7xl gap-12 px-6 sm:px-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-24"
+        >
+          <div>
+            <h2
+              id="contact-title"
+              class="mt-4 text-4xl font-semibold sm:text-5xl"
+            >
+              Hai una domanda?<br /><em>Scrivici.</em>
+            </h2>
+            <p class="mt-6 max-w-md text-sm leading-7 text-white/60">
+              Per disponibilità, taglie o semplicemente per conoscerci meglio.
+              Ti risponderemo appena possibile.
+            </p>
+          </div>
+          <form id="contactForm" class="grid gap-5" novalidate>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <label class="text-xs uppercase tracking-wider text-white/60"
+                >Nome<input
+                  id="formName"
+                  name="name"
+                  type="text"
+                  required
+                  autocomplete="name"
+                  class="mt-2 w-full border-b border-white/30 bg-transparent px-0 py-3 text-sm text-white outline-none transition focus:border-[#B8977E]"
+                  placeholder="Il tuo nome" /></label
+              ><label class="text-xs uppercase tracking-wider text-white/60"
+                >Email<input
+                  id="formEmail"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  class="mt-2 w-full border-b border-white/30 bg-transparent px-0 py-3 text-sm text-white outline-none transition focus:border-[#B8977E]"
+                  placeholder="La tua email"
+              /></label>
+            </div>
+            <label class="text-xs uppercase tracking-wider text-white/60"
+              >Messaggio<textarea
+                id="formMessage"
+                name="message"
+                rows="4"
+                required
+                class="mt-2 w-full resize-y border-b border-white/30 bg-transparent px-0 py-3 text-sm text-white outline-none transition focus:border-[#B8977E]"
+                placeholder="Come possiamo aiutarti?"
+              ></textarea>
+            </label>
+            <label class="flex items-start gap-3 text-xs leading-5 text-white/60">
+              <input
+                id="privacyConsent"
+                name="privacyConsent"
+                type="checkbox"
+                required
+                class="mt-1 h-4 w-4 shrink-0 accent-[#B8977E]"
+              />
+              <span>Ho preso visione della <a href="privacy.html" class="underline underline-offset-2 hover:text-white">Privacy Policy</a></span>
+            </label>
+            <div class="flex flex-wrap items-center gap-5">
+              <button
+                id="contactSubmitButton"
+                type="submit"
+                class="btn-primary rounded-full px-7 py-3.5 text-xs font-semibold uppercase tracking-[.15em]"
+              >
+                Invia email
+                <i class="fas fa-paper-plane ml-2" aria-hidden="true"></i>
+              </button>
+              <p
+                id="formStatus"
+                class="text-xs text-white/60"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div id="feedbackModal" class="fixed inset-0 z-[10000] hidden items-center justify-center bg-black/60 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="feedbackTitle">
+      <div class="w-full max-w-lg rounded-2xl bg-[#F9F8F6] p-6 text-[#1A1A1A] shadow-2xl sm:p-8">
+        <div class="flex items-start justify-between gap-5">
+          <div>
+            <h2 id="feedbackTitle" class="mt-2 font-serif text-2xl font-bold">Invia un Feedback sullo Sviluppo</h2>
+            <p class="mt-3 text-sm leading-relaxed text-gray-600">Hai riscontrato un problema sul sito o vuoi suggerire una miglioria? Invia un messaggio allo sviluppatore.</p>
+          </div>
+          <button id="closeFeedbackModal" type="button" class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-xl text-gray-500 transition hover:bg-black/5 hover:text-gray-900" aria-label="Chiudi feedback"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <form id="feedbackForm" class="mt-6 space-y-4" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="TUA_ACCESS_KEY_HERE">
+          <input type="hidden" name="subject" value="Feedback sviluppo sito Jeans Store">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600">Nome / Ruolo<input name="name" type="text" required placeholder="Es. Cliente, Visitatore" class="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-normal normal-case tracking-normal outline-none transition focus:border-[#B8977E] focus:ring-1 focus:ring-[#B8977E]"></label>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600">Email <span class="font-normal normal-case tracking-normal text-gray-400">(opzionale)</span><input name="email" type="email" placeholder="nome@email.it" class="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-normal normal-case tracking-normal outline-none transition focus:border-[#B8977E] focus:ring-1 focus:ring-[#B8977E]"></label>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600">Messaggio / Segnalazione<textarea name="message" required rows="4" placeholder="Raccontaci cosa possiamo migliorare..." class="mt-2 w-full resize-y rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-normal normal-case tracking-normal outline-none transition focus:border-[#B8977E] focus:ring-1 focus:ring-[#B8977E]"></textarea></label>
+          <p id="feedbackStatus" class="min-h-5 text-sm" aria-live="polite"></p>
+          <button id="feedbackSubmit" type="submit" class="w-full rounded-full bg-[#1A1A1A] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-[#B8977E] disabled:cursor-wait disabled:opacity-60">Invia Feedback</button>
+        </form>
+      </div>
+    </div>
+    <footer class="bg-[#111110] px-6 py-10 text-white sm:px-10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-8 sm:flex-row sm:items-end sm:justify-between"
+      >
+        <div>
+          <p class="font-serif text-2xl font-bold tracking-[.08em]">
+            JEANS STORE
+          </p>
+          <p class="mt-2 text-xs text-white/50">
+            Via Fucini 18 · Castiglioncello (LI)
+          </p>
+          <dl class="mt-3 space-y-1 text-xs text-white/50">
+            <div><dt class="inline font-medium text-white/70">Nome attività:</dt> <dd class="inline">Jeans Store Castiglioncello</dd></div>
+            <div><dt class="inline font-medium text-white/70">Dicitura societaria:</dt> <dd class="inline italic">Marchio gestito da FARO ROSSO DI MARTORANA GIUSEPPE</dd></div>
+            <div><dt class="inline font-medium text-white/70">Sede Legale:</dt> <dd class="inline italic">PIAZZA DELLA LIBERTA' 41 - 57023 - CECINA (LI)</dd></div>
+            <div><dt class="inline font-medium text-white/70">Partita IVA:</dt> <dd class="inline italic">00761930494</dd></div>
+          </dl>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-xs text-white/60">
+          <button type="button" data-feedback-open class="text-left transition hover:text-[#B8977E]">Segnala un problema / Feedback</button>
+          <a href="privacy.html" class="hover:text-white">Privacy &amp; Info Societarie</a
+          ><a
+            href="https://www.instagram.com/jeansstore_castiglioncello"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram text-base" aria-hidden="true"></i></a
+          ><a
+            href="https://www.facebook.com/share/19MtBWbHtQ/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook text-base" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+      <div
+        class="mx-auto mt-8 max-w-7xl border-t border-white/10 pt-5 text-[10px] uppercase tracking-[.15em] text-white/35"
+      >
+        <span>© 2026 Jeans Store Castiglioncello</span
+        ><span class="ml-4">Tutti i diritti riservati</span>
+      </div>
+    </footer>
+    <script>
+      const feedbackModal = document.getElementById("feedbackModal");
+      const feedbackForm = document.getElementById("feedbackForm");
+      const feedbackStatus = document.getElementById("feedbackStatus");
+      const feedbackSubmit = document.getElementById("feedbackSubmit");
+      const closeFeedback = () => {
+        feedbackModal.classList.add("hidden");
+        feedbackModal.classList.remove("flex");
+        document.body.style.overflow = "";
+      };
+      document.querySelectorAll("[data-feedback-open]").forEach((button) => button.addEventListener("click", () => {
+        feedbackModal.classList.remove("hidden");
+        feedbackModal.classList.add("flex");
+        feedbackStatus.textContent = "";
+        document.body.style.overflow = "hidden";
+      }));
+      document.getElementById("closeFeedbackModal").addEventListener("click", closeFeedback);
+      feedbackModal.addEventListener("click", (event) => {
+        if (event.target === feedbackModal) closeFeedback();
+      });
+      feedbackForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        feedbackSubmit.disabled = true;
+        feedbackSubmit.textContent = "Invio in corso...";
+        feedbackStatus.className = "min-h-5 text-sm text-gray-500";
+        try {
+          const response = await fetch(feedbackForm.action, {
+            method: "POST",
+            body: new FormData(feedbackForm),
+            headers: { Accept: "application/json" },
+          });
+          const result = await response.json();
+          if (!response.ok || !result.success) throw new Error("Invio non riuscito");
+          feedbackStatus.className = "min-h-5 text-sm text-green-700";
+          feedbackStatus.textContent = "Grazie per il feedback!";
+          window.setTimeout(() => {
+            feedbackForm.reset();
+            feedbackSubmit.disabled = false;
+            feedbackSubmit.textContent = "Invia Feedback";
+            closeFeedback();
+          }, 1200);
+        } catch (error) {
+          feedbackStatus.className = "min-h-5 text-sm text-red-700";
+          feedbackStatus.textContent = "Non è stato possibile inviare il feedback. Riprova tra poco.";
+          feedbackSubmit.disabled = false;
+          feedbackSubmit.textContent = "Invia Feedback";
+        }
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !feedbackModal.classList.contains("hidden")) closeFeedback();
+      });
+      const body = document.body;
+      const siteNav = document.getElementById("siteNav");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuButton = document.getElementById("mobileMenuButton");
+      const closeMobileMenu = document.getElementById("closeMobileMenu");
+      const backToTop = document.getElementById("backToTop");
+      const mapContainer = document.getElementById("mapContainer");
+      const mapConsentButton = document.getElementById("mapConsentButton");
+      const mapConsentKey = "maps_consent_given";
+      const mapEmbedUrl = "https://www.google.com/maps?q=Via+Fucini+18%2C+Castiglioncello&output=embed";
+      const loadInteractiveMap = () => {
+        const mapFrame = document.createElement("iframe");
+        mapFrame.className = "absolute inset-0 h-full w-full border-0";
+        mapFrame.src = mapEmbedUrl;
+        mapFrame.width = "100%";
+        mapFrame.height = "100%";
+        mapFrame.style.border = "0";
+        mapFrame.setAttribute("allowfullscreen", "");
+        mapFrame.loading = "lazy";
+        mapFrame.title = "Mappa di Jeans Store Castiglioncello";
+        mapContainer.querySelector("#mapConsentOverlay").replaceWith(mapFrame);
+      };
+      if (localStorage.getItem(mapConsentKey) === "true") {
+        loadInteractiveMap();
+      }
+      mapConsentButton.addEventListener("click", () => {
+        localStorage.setItem(mapConsentKey, "true");
+        loadInteractiveMap();
+      });
+      const closeMenu = () => {
+        mobileMenu.classList.remove("active");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+        body.style.overflow = "";
+      };
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+        mobileMenu.setAttribute("aria-hidden", "false");
+        mobileMenuButton.setAttribute("aria-expanded", "true");
+        body.style.overflow = "hidden";
+      });
+      closeMobileMenu.addEventListener("click", closeMenu);
+      document
+        .querySelectorAll(".mobile-link")
+        .forEach((link) => link.addEventListener("click", closeMenu));
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+      });
+      window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+        siteNav.classList.toggle("scrolled", currentScrollY > 12);
+        backToTop.classList.toggle("hidden", currentScrollY <= 300);
+        backToTop.classList.toggle("flex", currentScrollY > 300);
+      }, { passive: true });
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+      const contactForm = document.getElementById("contactForm");
+      const contactSubmitButton = document.getElementById("contactSubmitButton");
+      const formStatus = document.getElementById("formStatus");
+      const defaultSubmitLabel = contactSubmitButton.innerHTML;
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const name = document.getElementById("formName").value.trim();
+        const email = document.getElementById("formEmail").value.trim();
+        const message = document.getElementById("formMessage").value.trim();
+        const privacyConsent = document.getElementById("privacyConsent");
+        formStatus.className = "text-xs text-white/60";
+        if (!name || !email || !message || !privacyConsent.checked) {
+          formStatus.className = "text-xs text-red-300";
+          formStatus.textContent = "Compila tutti i campi e accetta la Privacy Policy.";
+          return;
+        }
+
+        contactSubmitButton.disabled = true;
+        contactSubmitButton.textContent = "Invio in corso...";
+        formStatus.textContent = "";
+        try {
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              access_key: "2ad6b4f2-96da-426f-a825-33789f837d12",
+              name,
+              email,
+              message,
+            }),
+          });
+          if (!response.ok) throw new Error("Invio non riuscito");
+          formStatus.className = "text-xs text-green-300";
+          formStatus.textContent = "Messaggio inviato con successo! Ti risponderemo al più presto.";
+          contactForm.reset();
+        } catch (error) {
+          formStatus.className = "text-xs text-red-300";
+          formStatus.textContent = "Si è verificato un errore durante l'invio. Riprova più tardi.";
+        } finally {
+          contactSubmitButton.disabled = false;
+          contactSubmitButton.innerHTML = defaultSubmitLabel;
+        }
+      });
+    </script>
+  </body>
+</html>

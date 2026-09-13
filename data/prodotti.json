@@ -1,0 +1,417 @@
+[
+  {
+    "id": "8K0417_KK009_S215",
+    "genere": "donna",
+    "brand": "Patrizia Pepe",
+    "nome": "Dolcevita con dettagli in pizzo",
+    "categoria": "camicie-bluse",
+    "prezzo": 220.00,
+    "colori": ["Grigio Melange"],
+    "composizione": "misto fibre a finezza 14",
+    "immagini": [
+      "assets/img/prodotti/8K0417_KK009_S215_1.webp",
+      "assets/img/prodotti/8K0417_KK009_S215_3.webp",
+      "assets/img/prodotti/8K0417_KK009_S215_4.webp"
+    ],
+    "descrizione": "Vestibilità slim, maniche lunghe, dolcevita, lavorazione della maglia in costina con dettagli in pizzo",
+    "inEvidenza": true,
+    "disponibile": true
+  },
+  {
+    "id": "8K0420_K034_G639",
+    "genere": "donna",
+    "brand": "Patrizia Pepe",
+    "nome": "Maglia in lana leggera con collo a cratere",
+    "categoria": "camicie-bluse",
+    "prezzo": 185.00,
+    "colori": ["Mysterious Green, Nero, Whooly White"],
+    "composizione": "Pura lana a finezza 14",
+    "immagini": [
+      "assets/img/prodotti/8K0420_K034_G639_1.webp",
+      "assets/img/prodotti/8K0420_K034_G639_3.webp",
+      "assets/img/prodotti/8K0420_K034_G639_4.webp"
+    ],
+    "descrizione": "Vestibilità slim, Maniche lunghe, Collo alto, Lavorazione della maglia in costina",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "8K0133_K282_S259",
+    "genere": "donna",
+    "brand": "Patrizia Pepe",
+    "nome": "Maglia con ricamo logo",
+    "categoria": "abiti",
+    "prezzo": 230.00,
+    "colori": ["Grigio"],
+    "composizione": "Misto lana/acrlico fin.7",
+    "immagini": [
+      "assets/img/prodotti/A26---patrizia_20pepe---8K0133K282S259.webp",
+      "assets/img/prodotti/A26---patrizia_20pepe---8K0133K282S259_1_P.webp"
+    ],
+    "descrizione": "Maglieria, Vestibilità regolare, Manica lunga, Scollo tondo, Lavorazione rasata, Ricamo logo con perline",
+    "inEvidenza": true,
+    "disponibile": true
+  },
+  {
+    "id": "AW26-SWDZIG-01X",
+    "genere": "donna",
+    "brand": "Patrizia Pepe",
+    "nome": "Maglione loungewear da donna con lana",
+    "categoria": "maglie-tshirt",
+    "prezzo": 249.90,
+    "colori": ["Beige, Grigio, Nero"],
+    "composizione": "50% Acrilico, 50% Lana. Ricamo 100% Poliestere",
+    "immagini": [
+      "assets/img/prodotti/AW26-SWDZIG-01X_F1.webp",
+      "assets/img/prodotti/AW26-SWDZIG-01X_F3.webp"
+    ],
+    "descrizione": "Manica lunga, Scollatura rotonda, manica con una linea di spalla abbassata, Taglio regular fit",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "UF6515J1624L9681",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "Crop-top effetto denim pitonato",
+    "categoria": "abiti",
+    "prezzo": 69.00,
+    "colori": ["Pitonato blu"],
+    "composizione": "96% Viscosa, 4% Elastan",
+    "immagini": [
+      "assets/img/prodotti/E-UF6515J1624L9681-1-N.webp",
+      "assets/img/prodotti/E-UF6515J1624L9681-2-N.webp",
+      "assets/img/prodotti/E-UF6515J1624L9681-7-N.webp"
+    ],
+    "descrizione": "Crop top in jersey di viscosa, Stampa effetto denim pitonata, Maniche lunghe",
+    "inEvidenza": true,
+    "disponibile": true
+  },
+  {
+    "id": "UF6522D485479155",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "Bralette in denim con strass",
+    "categoria": "camicie-bluse",
+    "prezzo": 149.00,
+    "colori": ["Denim blu"],
+    "composizione": "100% Cotone",
+    "immagini": [
+      "assets/img/prodotti/E-UF6522D485479155-1-N.webp",
+      "assets/img/prodotti/E-UF6522D485479155-2-N.webp",
+      "assets/img/prodotti/E-UF6522D485479155-7-N.webp"
+    ],
+    "descrizione": "Bralette in denim no-stretch, Strass all-over, Spalline regolabili, Chiusura con gancetti posteriori",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6034MA16R02050",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "Cardigan in lana con dettaglio lingerie",
+    "categoria": "camicie-bluse",
+    "prezzo": 149.00,
+    "colori": ["Grigio Melange"],
+    "composizione": "Tessuto esterno: 35% viscosio, 35% lana, 30% poliammide| Rivestimento principale: 100% poliammide| Tessuto secondario: 100% poliestere",
+    "immagini": [
+      "assets/img/prodotti/E-WF6034MA16R02050-1-N.webp",
+      "assets/img/prodotti/E-WF6034MA16R02050-2-N.webp",
+      "assets/img/prodotti/E-WF6034MA16R02050-3-N.webp",
+      "assets/img/prodotti/E-WF6034MA16R02050-7-N.webp"
+    ],
+    "descrizione": "Cardigan dai filati in misto lana, Girocollo Chiusura con bottoni, Volant lingerie in raso con pizzo",
+    "inEvidenza": true,
+    "disponibile": true
+  },
+  {
+    "id": "WF6046MS92PL9193",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "Maglia con intarsi lamé",
+    "categoria": "maglie-tshirt",
+    "prezzo": 159.00,
+    "colori": ["Rosa"],
+    "composizione": "Tessuto principale: 77% Poliestere, 23% Poliestere metallizzato",
+    "immagini": [
+      "assets/img/prodotti/E-WF6046MS92PL9193-1-N.webp",
+      "assets/img/prodotti/E-WF6046MS92PL9193-2-N.webp",
+      "assets/img/prodotti/E-WF6046MS92PL9193-7-N.webp"
+    ],
+    "descrizione": "Maglia colorblock con intarsi, Interventi in lurex®, Girocollo ampio",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6231MA16RL9207",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "Maglia con intarsio geometrico",
+    "categoria": "maglie-tshirt",
+    "prezzo": 129.00,
+    "colori": ["Nero"],
+    "composizione": "Tessuto principale: 35% Viscosa, 35% Lana, 30% Poliammide",
+    "immagini": [
+      "assets/img/prodotti/E-WF6231MA16RL9207-1-N.webp",
+      "assets/img/prodotti/E-WF6231MA16RL9207-2-N.webp",
+      "assets/img/prodotti/E-WF6231MA16RL9207-3-N.webp"
+    ],
+    "descrizione": "Maglia in misto lana, Intarsio geometrico Argyle, Girocollo Maniche lunghe",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6310MA52SL9303",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "Cardigan in maglia stampata",
+    "categoria": "maglie-tshirt",
+    "prezzo": 149.00,
+    "colori": ["Cachmere"],
+    "composizione": "Tessuto esterno: 43% viscosio, 42% poliammide, 15% lana",
+    "immagini": [
+      "assets/img/prodotti/E-WF6310MA52SL9303-1-N.webp",
+      "assets/img/prodotti/E-WF6310MA52SL9303-2-N.webp",
+      "assets/img/prodotti/E-WF6310MA52SL9303-7-N.webp"
+    ],
+    "descrizione": "Cardigan in maglia, Filati in lana, Scollo a V, Maniche lunghe con polsini, Chiusura con bottoni",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6324J0088L9437",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "T-shirt con ricami gioiello",
+    "categoria": "maglie-tshirt",
+    "prezzo": 99.00,
+    "colori": ["Bianco/castoni"],
+    "composizione": "100% Cotone",
+    "immagini": [
+      "assets/img/prodotti/E-WF6324J0088L9437-1-N.webp",
+      "assets/img/prodotti/E-WF6324J0088L9437-2-N.webp",
+      "assets/img/prodotti/E-WF6324J0088L9437-7-N.webp"
+    ],
+    "descrizione": "T-shirt regular fit in jersey di cotone, Ricami gioiello, Girocollo, maniche corte",
+    "inEvidenza": true,
+    "disponibile": true
+  },
+  {
+    "id": "WF6346JS923L9466",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "T-shirt con logo",
+    "categoria": "maglie-tshirt",
+    "prezzo": 69.00,
+    "colori": ["Bianco/viola"],
+    "composizione": "100% Cotone",
+    "immagini": [
+      "assets/img/prodotti/E-WF6346JS923L9466-1-N.webp",
+      "assets/img/prodotti/E-WF6346JS923L9466-2-N.webp",
+      "assets/img/prodotti/E-WF6346JS923L9466-3-N.webp",
+      "assets/img/prodotti/E-WF6346JS923L9466-7-N.webp"
+    ],
+    "descrizione": "T-shirt in jersey, Logo Liu Jo con stampa floreale, Design versatile e femminile",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6348J6308L9374",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "T-shirt con stampa",
+    "categoria": "maglie-tshirt",
+    "prezzo": 49.00,
+    "colori": ["Bianco/je t'aime"],
+    "composizione": "100% Cotone",
+    "immagini": [
+      "assets/img/prodotti/E-WF6348J6308L9374-1-N.webp",
+      "assets/img/prodotti/E-WF6348J6308L9374-2-N.webp",
+      "assets/img/prodotti/E-WF6348J6308L9374-7-N.webp"
+    ],
+    "descrizione": "T-shirt in jersey, Slim fit, Made In Italy",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6400MA48SL9213",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "Cardigan in lana con stampa rose",
+    "categoria": "maglie-tshirt",
+    "prezzo": 179.00,
+    "colori": ["Bianco"],
+    "composizione": "Tessuto principale: 63% Lana, 37% Poliammide",
+    "immagini": [
+      "assets/img/prodotti/E-WF6400MA48SL9213-1-N (1).webp",
+      "assets/img/prodotti/E-WF6400MA48SL9213-2-N.webp",
+      "assets/img/prodotti/E-WF6400MA48SL9213-7-N.webp"
+    ],
+    "descrizione": "Cardigan in lana, Rose stampate in dégradé, Girocollo, Chiusura con bottoni",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6433JS904N9951",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "T-shirt in jersey con stampa",
+    "categoria": "maglie-tshirt",
+    "prezzo": 59.00,
+    "colori": ["Bianco"],
+    "composizione": "100% Cotone",
+    "immagini": [
+      "assets/img/prodotti/E-WF6433JS904N9951-1-N.webp",
+      "assets/img/prodotti/E-WF6433JS904N9951-2-N.webp",
+      "assets/img/prodotti/E-WF6433JS904N9951-7-N.webp"
+    ],
+    "descrizione": "T-shirt in jersey di cotone, Stampa frontale, Girocollo, maniche corte",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6440J3988D3051",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "T-shirt a righe con ricamo",
+    "categoria": "maglie-tshirt",
+    "prezzo": 79.00,
+    "colori": ["Bianco e nero"],
+    "composizione": "Tessuto principale: 62% Poliestere, 33% Viscosa, 5% Elastan",
+    "immagini": [
+      "assets/img/prodotti/E-WF6440J3988D3051-1-N.webp",
+      "assets/img/prodotti/E-WF6440J3988D3051-2-N.webp",
+      "assets/img/prodotti/E-WF6440J3988D3051-7-N.webp"
+    ],
+    "descrizione": "T-shirt a maniche lunghe in jersey, Dettagli ricamati sulla parte frontale, Made In Italy, Vestibilità asciutta: per un fit più morbido consigliamo di acquistare una taglia in più rispetto a quella indossata abitualmente",
+    "inEvidenza": true,
+    "disponibile": true
+  },
+  {
+    "id": "WF6441JS904L9450",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "T-shirt con stampa",
+    "categoria": "maglie-tshirt",
+    "prezzo": 99.00,
+    "colori": ["Bianco/Miss mouse B&W"],
+    "composizione": "100% Cotone",
+    "immagini": [
+      "assets/img/prodotti/E-WF6441JS904L9450-1-N.webp",
+      "assets/img/prodotti/E-WF6441JS904L9450-2-N.webp",
+      "assets/img/prodotti/E-WF6441JS904L9450-7-N.webp"
+    ],
+    "descrizione": "T-shirt in jersey di cotone, Stampa Miss Mouse, Logo Liu Jo sul retro, Girocollo, Maniche corte",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6441JS904L9548",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "T-shirt con stampa",
+    "categoria": "maglie-tshirt",
+    "prezzo": 99.00,
+    "colori": ["Bianco/Mister mouse B&W"],
+    "composizione": "100% Cotone",
+    "immagini": [
+      "assets/img/prodotti/E-WF6441JS904L9548-1-N.webp",
+      "assets/img/prodotti/E-WF6441JS904L9548-2-N.webp",
+      "assets/img/prodotti/E-WF6441JS904L9548-7-N.webp"
+    ],
+    "descrizione": "T-shirt in jersey di cotone, Stampa Mister Mouse, Logo Liu Jo sul retro, Girocollo, Maniche corte",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6441JS904L9549",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "T-shirt con stampa",
+    "categoria": "maglie-tshirt",
+    "prezzo": 99.00,
+    "colori": ["Nero/Mister mouse"],
+    "composizione": "100% Cotone",
+    "immagini": [
+      "assets/img/prodotti/E-WF6441JS904L9549-1-N.webp",
+      "assets/img/prodotti/E-WF6441JS904L9549-2-N.webp",
+      "assets/img/prodotti/E-WF6441JS904L9549-7-N.webp"
+    ],
+    "descrizione": "T-shirt in jersey di cotone, Stampa Mister Mouse, Logo Liu Jo sul retro, Girocollo, Maniche corte",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6447JS923L9481",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "T-shirt con scollo a V",
+    "categoria": "maglie-tshirt",
+    "prezzo": 49.00,
+    "colori": ["Bianco"],
+    "composizione": "100% Cotone",
+    "immagini": [
+      "assets/img/prodotti/E-WF6447JS923L9481-1-N.webp",
+      "assets/img/prodotti/E-WF6447JS923L9481-2-N.webp",
+      "assets/img/prodotti/E-WF6447JS923L9481-7-N.webp"
+    ],
+    "descrizione": "T-shirt in jersey di cotone, Scollo a V, Maniche corte, Strass applicati, Vestibilità aderente",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "WF6448JS923L9467",
+    "genere": "donna",
+    "brand": "Liu-Jo",
+    "nome": "T-shirt skinny fit con logo",
+    "categoria": "maglie-tshirt",
+    "prezzo": 75.00,
+    "colori": ["Nero"],
+    "composizione": "100% Cotone",
+    "immagini": [
+      "assets/img/prodotti/E-WF6448JS923L9467-1-N.webp",
+      "assets/img/prodotti/E-WF6448JS923L9467-2-N.webp",
+      "assets/img/prodotti/E-WF6448JS923L9467-7-N.webp"
+    ],
+    "descrizione": "T-shirt skinny fit in jersey, Logo Liu Jo stampato sul davanti, Scollo a V elegante",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "RDA2602054013",
+    "genere": "donna",
+    "brand": "Relish",
+    "nome": "Maglia JORIA manica lunga",
+    "categoria": "maglie-tshirt",
+    "prezzo": 109.00,
+    "colori": ["Paloma/nero"],
+    "composizione": "72% viscosa 28% poliammide",
+    "immagini": [
+      "assets/img/prodotti/RDA2602054013.webp",
+      "assets/img/prodotti/RDA2602054013_1.webp",
+      "assets/img/prodotti/RDA2602054013_2.webp"
+    ],
+    "descrizione": "Maglia JORIA manica lunga con bordo paillettes più pietre più goccia schiena",
+    "inEvidenza": false,
+    "disponibile": true
+  },
+  {
+    "id": "RDA2602054017",
+    "genere": "donna",
+    "brand": "Relish",
+    "nome": "Cardigan IMPERATRICE",
+    "categoria": "maglie-tshirt",
+    "prezzo": 89.00,
+    "colori": ["milk, chocolate brown, black, croissant"],
+    "composizione": "72% viscosa 28% poliammide",
+    "immagini": [
+      "assets/img/prodotti/RDA2602054017.webp",
+      "assets/img/prodotti/RDA2602054017_1.webp",
+      "assets/img/prodotti/RDA2602054017_2.webp",
+      "assets/img/prodotti/RDA2602054017_black.webp"
+    ],
+    "descrizione": "Cardigan IMPERATRICE manica lunga girocollo con bottoni crystal più strass",
+    "inEvidenza": false,
+    "disponibile": true
+  }
+]

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collezioni &amp; Social | Jeans Store Castiglioncello</title>
+    <meta name="description" content="Scopri le collezioni e gli ultimi arrivi di Jeans Store a Castiglioncello. Segui i nostri canali social per le novità quotidiane.">
+
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: "Playfair Display";
+            src: url("assets/fonts/playfair-display-v40-latin-regular.woff2") format("woff2");
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Playfair Display";
+            src: url("assets/fonts/playfair-display-v40-latin-600.woff2") format("woff2");
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Playfair Display";
+            src: url("assets/fonts/playfair-display-v40-latin-700.woff2") format("woff2");
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Playfair Display";
+            src: url("assets/fonts/playfair-display-v40-latin-italic.woff2") format("woff2");
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Poppins";
+            src: url("assets/fonts/poppins-v24-latin-300.woff2") format("woff2");
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Poppins";
+            src: url("assets/fonts/poppins-v24-latin-regular.woff2") format("woff2");
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Poppins";
+            src: url("assets/fonts/poppins-v24-latin-500.woff2") format("woff2");
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Poppins";
+            src: url("assets/fonts/poppins-v24-latin-600.woff2") format("woff2");
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+        }
+        :root {
+            --primary: #1A1A1A;
+            --accent: #B8977E;
+            --neutral-bg: #F9F8F6;
+            --text-dark: #222222;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--neutral-bg);
+        }
+
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .btn-luxury {
+            background-color: var(--primary);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-luxury:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            background-color: #25D366;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-fixed:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background-color: #f9f8f6 !important;
+            opacity: 1 !important;
+            height: 100vh !important;
+            height: 100dvh !important;
+            min-height: 100vh !important;
+            min-height: 100dvh !important;
+            top: 0 !important;
+            bottom: auto !important;
+            padding-bottom: calc(1.75rem + env(safe-area-inset-bottom)) !important;
+            isolation: isolate;
+            z-index: 9999;
+        }
+
+        .mobile-menu.active {
+            left: 0 !important;
+            right: auto !important;
+            transform: none !important;
+        }
+        .mobile-menu-social {
+            position: relative;
+            z-index: 1;
+            flex-shrink: 0;
+            color: #171716;
+        }
+        .mobile-menu-social a {
+            display: inline-flex;
+            width: 1.75rem;
+            height: 1.75rem;
+            align-items: center;
+            justify-content: center;
+            color: #171716;
+        }
+
+        .brand-filter.is-active {
+            background-color: #B8977E !important;
+            border-color: #B8977E !important;
+            color: #1A1A1A !important;
+        }
+
+        .brand-filter:not(.is-active) {
+            background-color: #ffffff !important;
+            color: #1A1A1A !important;
+        }
+
+        .filter-button.is-active {
+            background-color: #B8977E !important;
+            border-color: #B8977E !important;
+            color: #ffffff !important;
+        }
+
+        .filter-button:not(.is-active) {
+            background-color: transparent !important;
+            color: #1A1A1A !important;
+        }
+
+        .genere-filter.is-active {
+            background-color: #B8977E !important;
+            color: #ffffff !important;
+        }
+
+        .genere-filter:not(.is-active) {
+            background-color: transparent !important;
+            color: rgba(255, 255, 255, .7) !important;
+        }
+
+        .image-fallback {
+            align-items: center;
+            color: #8b817a;
+            display: flex;
+            flex-direction: column;
+            inset: 0;
+            justify-content: center;
+            position: absolute;
+            text-align: center;
+        }
+
+        .modal-overlay {
+            opacity: 0;
+            transition: opacity 220ms ease;
+        }
+
+        .modal-overlay.is-open {
+            opacity: 1;
+        }
+
+        .modal-panel {
+            opacity: 0;
+            transform: translateY(12px) scale(.98);
+            transition: opacity 220ms ease, transform 220ms ease;
+        }
+
+        .modal-overlay.is-open .modal-panel {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        @media (max-width: 767px) {
+            .navbar {
+                backdrop-filter: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!-- WhatsApp Widget Fisso -->
+    <a href="https://wa.me/393456413731?text=Ciao!%20Vorrei%20informazioni%20sulle%20collezioni%20in%20negozio." target="_blank" class="whatsapp-fixed" aria-label="Contattaci su WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Topbar -->
+    <div class="bg-[#111111] text-gray-300 px-5 py-2 text-[10px] tracking-[.16em] uppercase sm:text-xs">
+        <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-1">
+            <a href="https://maps.google.com/?q=Via+Fucini+18+Castiglioncello" target="_blank" rel="noopener noreferrer" class="hover:text-white"><i class="fas fa-location-dot mr-2 text-[#B8977E]"></i>Via Fucini 18, Castiglioncello (LI)</a>
+            <div class="flex items-center gap-4">
+                <a href="tel:+390586760196" class="hover:text-white"><i class="fas fa-phone mr-1.5"></i>0586 760196</a>
+                <a href="https://www.instagram.com/jeansstore_castiglioncello" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram text-base"></i></a>
+                <a href="https://www.facebook.com/share/19MtBWbHtQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook text-base"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <nav class="navbar sticky top-0 w-full z-50 border-b border-gray-100" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl md:text-3xl font-bold font-serif tracking-wide text-gray-900">
+                JEANS STORE
+            </a>
+
+            <div class="hidden md:flex space-x-8 items-center text-sm uppercase tracking-wider font-medium">
+                <a href="index.html" class="hover:text-[#B8977E] transition">Home</a>
+                <a href="vetrina.html" class="text-[#B8977E] font-semibold transition">Collezioni</a>
+                <a href="index.html#brand" class="hover:text-[#B8977E] transition">Brand</a>
+                <a href="index.html#contatti" class="hover:text-[#B8977E] transition">Contatti</a>
+            </div>
+
+            <button id="mobileMenuButton" class="md:hidden text-2xl text-gray-900 focus:outline-none" aria-label="Apri menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-screen w-full bg-[#F9F8F6] shadow-2xl px-7 pt-7 z-[9999] flex flex-col justify-between" aria-label="Menu mobile" aria-hidden="true">
+            <div>
+                <div class="flex items-center justify-between">
+                    <span class="font-serif text-xl font-bold tracking-[.08em]">JEANS STORE</span>
+                    <button id="closeMobileMenu" type="button" class="text-2xl" aria-label="Chiudi menu">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="mt-16 flex flex-col gap-7 font-serif text-3xl">
+                    <a href="index.html" class="mobile-link">Home</a>
+                    <a href="vetrina.html" class="mobile-link text-[#B8977E]">Collezioni</a>
+                    <a href="index.html#brand" class="mobile-link">Brand</a>
+                    <a href="index.html#contatti" class="mobile-link">Contatti</a>
+                </div>
+            </div>
+            <div class="mobile-menu-social border-t border-black/10 pt-6">
+                <p class="text-xs uppercase tracking-wider text-gray-500">Seguici</p>
+                <div class="mt-4 flex gap-5 text-xl">
+                    <a href="https://www.instagram.com/jeansstore_castiglioncello" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/share/19MtBWbHtQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header & Card Social -->
+    <section class="py-12 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-6 max-w-5xl">
+
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h1 class="text-3xl md:text-5xl font-bold font-serif text-gray-900 mb-4">Cosa Trovi in negozio</h1>
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                    Una panoramica delle nostre linee d'abbigliamento. Aggiorniamo quotidianamente le novità sui nostri canali social ufficiali.
+                </p>
+            </div>
+
+            <!-- CARD SOCIAL RAGGRUPPATA -->
+            <div class="bg-[#F9F8F6] border border-gray-200/80 rounded-3xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-left">
+                    <h3 class="text-xl font-serif font-bold text-gray-900">Seguici per i Nuovi Arrivi</h3>
+                    <p class="text-xs md:text-sm text-gray-500 mt-1">Pubblichiamo ogni giorno foto, storie e abbinamenti direttamente dal negozio.</p>
+                </div>
+
+                <div class="flex flex-wrap sm:flex-nowrap gap-3 w-full md:w-auto justify-center">
+                    <a href="https://www.instagram.com/jeansstore_castiglioncello" target="_blank" class="flex-1 sm:flex-none px-6 py-3.5 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white rounded-full text-xs font-semibold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:opacity-95 transition shadow-sm">
+                        <i class="fab fa-instagram text-base"></i> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/share/19MtBWbHtQ/?mibextid=wwXIfr" target="_blank" class="flex-1 sm:flex-none px-6 py-3.5 bg-[#1877F2] text-white rounded-full text-xs font-semibold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-blue-700 transition shadow-sm">
+                        <i class="fab fa-facebook-f text-base"></i> Facebook
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Catalogo prodotti -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 max-w-6xl">
+
+            <div class="flex justify-between items-end mb-10 border-b border-gray-200 pb-4">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">Le Nostre Categorie</h2>
+                </div>
+            </div>
+
+            <div class="mb-8 flex flex-wrap justify-center gap-1 rounded-2xl bg-[#1A1A1A] p-1.5 shadow-sm" role="group" aria-label="Filtra per genere">
+                <button type="button" data-genere="all" class="genere-filter flex-1 rounded-xl bg-[#B8977E] px-5 py-3 text-xs font-semibold uppercase tracking-[.16em] text-white transition-colors">Tutti</button>
+                <button type="button" data-genere="donna" class="genere-filter flex-1 rounded-xl px-5 py-3 text-xs font-semibold uppercase tracking-[.16em] text-white/70 transition-colors hover:bg-white/10 hover:text-white">Donna</button>
+                <button type="button" data-genere="uomo" class="genere-filter flex-1 rounded-xl px-5 py-3 text-xs font-semibold uppercase tracking-[.16em] text-white/70 transition-colors hover:bg-white/10 hover:text-white">Uomo</button>
+            </div>
+
+            <div class="mb-6 flex flex-col gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm md:flex-row md:items-center md:justify-between">
+                <label class="relative block min-w-0 w-full md:max-w-sm md:flex-1">
+                    <span class="sr-only">Cerca prodotti</span>
+                    <i class="fas fa-search pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-sm text-gray-400" aria-hidden="true"></i>
+                    <input type="text" id="searchInput" placeholder="Cerca per nome o brand..." class="w-full rounded-full border border-gray-200 bg-[#F9F8F6] py-3 pl-11 pr-11 text-sm text-gray-900 outline-none transition focus:border-[#B8977E] focus:ring-1 focus:ring-[#B8977E]">
+                    <button type="button" id="clearSearch" class="absolute right-3 top-1/2 hidden h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full text-gray-400 transition hover:bg-gray-200 hover:text-gray-900" aria-label="Cancella ricerca">
+                        <i class="fas fa-times text-xs" aria-hidden="true"></i>
+                    </button>
+                </label>
+                <div class="flex flex-wrap items-center justify-between gap-3 md:justify-end">
+                    <span id="productCount" class="text-xs text-gray-500" aria-live="polite">Mostrando 0 prodotti</span>
+                    <button type="button" id="resetFilters" class="rounded-full border border-[#B8977E] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#1A1A1A] transition hover:bg-[#B8977E] hover:text-white">Azzera Filtri</button>
+                </div>
+            </div>
+
+            <div class="mb-4 flex flex-wrap justify-center gap-2" role="group" aria-label="Filtra per categoria">
+                <button type="button" data-category="all" class="filter-button rounded-full border border-[#B8977E] bg-[#B8977E] px-4 py-2 text-xs font-semibold text-white transition-colors">Tutti</button>
+                <button type="button" data-category="abiti" class="filter-button rounded-full border border-[#B8977E] px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-[#B8977E] hover:text-white">Abiti</button>
+                <button type="button" data-category="camicie-bluse" class="filter-button rounded-full border border-[#B8977E] px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-[#B8977E] hover:text-white">Camicie &amp; Bluse</button>
+                <button type="button" data-category="pantaloni-jeans" class="filter-button rounded-full border border-[#B8977E] px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-[#B8977E] hover:text-white">Pantaloni &amp; Jeans</button>
+                <button type="button" data-category="maglie-tshirt" class="filter-button rounded-full border border-[#B8977E] px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-[#B8977E] hover:text-white">Maglieria</button>
+                <button type="button" data-category="capispalla-giacchetti" class="filter-button rounded-full border border-[#B8977E] px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-[#B8977E] hover:text-white">Capispalla</button>
+                <button type="button" data-category="accessori" class="filter-button rounded-full border border-[#B8977E] px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-[#B8977E] hover:text-white">Accessori</button>
+            </div>
+
+            <div class="mb-8 flex flex-wrap items-center justify-center gap-2" role="group" aria-label="Filtra per brand">
+                <span class="mr-1 text-[10px] font-semibold uppercase tracking-widest text-gray-500">Brand</span>
+                <button type="button" data-brand="all" class="brand-filter rounded-full border border-[#B8977E] bg-[#B8977E] px-4 py-2 text-xs font-semibold text-gray-900 transition-colors">Tutti</button>
+                <button type="button" data-brand="Patrizia Pepe" class="brand-filter rounded-full border border-gray-300 px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:border-gray-900">Patrizia Pepe</button>
+                <button type="button" data-brand="Liu-Jo" class="brand-filter rounded-full border border-gray-300 px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:border-gray-900">Liu-Jo</button>
+                <button type="button" data-brand="Relish" class="brand-filter rounded-full border border-gray-300 px-4 py-2 text-xs font-semibold text-gray-900 transition-colors hover:border-gray-900">Relish</button>
+            </div>
+
+            <!-- Griglia prodotti caricata dal catalogo -->
+            <div id="prodottiContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" aria-live="polite">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modale dettaglio prodotto -->
+    <div id="productModal" class="modal-overlay fixed inset-0 z-[10000] hidden items-center justify-center bg-black/60 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+        <div class="modal-panel relative max-h-[92vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-white shadow-2xl">
+            <button id="closeProductModal" type="button" class="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-xl text-gray-900 shadow-sm transition hover:bg-gray-100" aria-label="Chiudi dettaglio prodotto">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <div class="grid md:grid-cols-2">
+                <div class="bg-[#F9F8F6] p-5 md:p-8">
+                    <div class="relative aspect-[4/5] overflow-hidden rounded-xl bg-gray-100">
+                        <img id="modalMainImage" src="" alt="" class="h-full w-full object-contain">
+                    </div>
+                    <div id="modalThumbnails" class="mt-4 grid grid-cols-4 gap-2"></div>
+                </div>
+                <div class="flex flex-col p-6 md:p-10">
+                    <p id="modalProductBrand" class="text-xs font-semibold uppercase tracking-[.18em] text-[#B8977E]"></p>
+                    <p id="modalProductGender" class="mt-3 text-[10px] font-semibold uppercase tracking-[.18em] text-gray-500"></p>
+                    <h2 id="modalProductName" class="mt-2 pr-8 font-serif text-3xl font-bold text-gray-900"></h2>
+                    <p id="modalProductId" class="mt-3 text-[10px] uppercase tracking-widest text-gray-400"></p>
+                    <p id="modalProductPrice" class="mt-6 text-xl font-semibold text-gray-900"></p>
+                    <div class="mt-6 border-t border-gray-100 pt-5">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-500">Composizione</p>
+                        <p id="modalProductComposition" class="mt-2 text-sm text-gray-700"></p>
+                        <p id="modalProductDescription" class="mt-4 text-sm leading-relaxed text-gray-600"></p>
+                    </div>
+                    <p class="mt-6 text-sm leading-relaxed text-gray-600">Per conoscere le taglie e la disponibilità attuale in negozio, contattaci direttamente.</p>
+                    <a id="modalWhatsapp" href="#" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-[#1eae54]">
+                        <i class="fab fa-whatsapp text-base" aria-hidden="true"></i> Contattaci su WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback sviluppo -->
+    <div id="feedbackModal" class="fixed inset-0 z-[10000] hidden items-center justify-center bg-black/60 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="feedbackTitle">
+        <div class="w-full max-w-lg rounded-2xl bg-[#F9F8F6] p-6 text-[#1A1A1A] shadow-2xl sm:p-8">
+            <div class="flex items-start justify-between gap-5"><div><h2 id="feedbackTitle" class="mt-2 font-serif text-2xl font-bold">Invia un Feedback sullo Sviluppo</h2><p class="mt-3 text-sm leading-relaxed text-gray-600">Hai riscontrato un problema sul sito o vuoi suggerire una miglioria? Invia un messaggio allo sviluppatore.</p></div><button id="closeFeedbackModal" type="button" class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-xl text-gray-500 transition hover:bg-black/5 hover:text-gray-900" aria-label="Chiudi feedback"><i class="fas fa-times" aria-hidden="true"></i></button></div>
+            <form id="feedbackForm" class="mt-6 space-y-4" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="TUA_ACCESS_KEY_HERE"><input type="hidden" name="subject" value="Feedback sviluppo sito Jeans Store"><label class="block text-xs font-semibold uppercase tracking-wider text-gray-600">Nome / Ruolo<input name="name" type="text" required placeholder="Es. Cliente, Visitatore" class="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-normal normal-case tracking-normal outline-none transition focus:border-[#B8977E] focus:ring-1 focus:ring-[#B8977E]"></label><label class="block text-xs font-semibold uppercase tracking-wider text-gray-600">Email <span class="font-normal normal-case tracking-normal text-gray-400">(opzionale)</span><input name="email" type="email" placeholder="nome@email.it" class="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-normal normal-case tracking-normal outline-none transition focus:border-[#B8977E] focus:ring-1 focus:ring-[#B8977E]"></label><label class="block text-xs font-semibold uppercase tracking-wider text-gray-600">Messaggio / Segnalazione<textarea name="message" required rows="4" placeholder="Raccontaci cosa possiamo migliorare..." class="mt-2 w-full resize-y rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-normal normal-case tracking-normal outline-none transition focus:border-[#B8977E] focus:ring-1 focus:ring-[#B8977E]"></textarea></label><p id="feedbackStatus" class="min-h-5 text-sm" aria-live="polite"></p><button id="feedbackSubmit" type="submit" class="w-full rounded-full bg-[#1A1A1A] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-[#B8977E] disabled:cursor-wait disabled:opacity-60">Invia Feedback</button></form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+        <footer class="bg-[#111110] px-6 py-10 text-white sm:px-10">
+            <div class="mx-auto flex max-w-7xl flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="font-serif text-2xl font-bold tracking-[.08em]">JEANS STORE</p>
+                    <p class="mt-2 text-xs text-white/50">Via Fucini 18 · Castiglioncello (LI)</p>
+                    <dl class="mt-3 space-y-1 text-xs text-white/50">
+                        <div><dt class="inline font-medium text-white/70">Nome attività:</dt> <dd class="inline">Jeans Store Castiglioncello</dd></div>
+                        <div><dt class="inline font-medium text-white/70">Dicitura societaria:</dt> <dd class="inline italic">Marchio gestito da FARO ROSSO DI MARTORANA GIUSEPPE</dd></div>
+                        <div><dt class="inline font-medium text-white/70">Sede Legale:</dt> <dd class="inline italic">PIAZZA DELLA LIBERTA' 41 - 57023 - CECINA (LI)</dd></div>
+                        <div><dt class="inline font-medium text-white/70">Partita IVA:</dt> <dd class="inline italic">00761930494</dd></div>
+                    </dl>
+                </div>
+                <div class="flex flex-wrap gap-x-6 gap-y-3 text-xs text-white/60">
+                    <button type="button" data-feedback-open class="text-left transition hover:text-[#B8977E]">Segnala un problema / Feedback</button>
+                    <a href="privacy.html" class="hover:text-white">Privacy &amp; Info Societarie</a>
+                    <a href="https://www.instagram.com/jeansstore_castiglioncello" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram text-base" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/share/19MtBWbHtQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook text-base" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="mx-auto mt-8 max-w-7xl border-t border-white/10 pt-5 text-[10px] uppercase tracking-[.15em] text-white/35">
+                <span>© 2026 Jeans Store Castiglioncello</span><span class="ml-4">Tutti i diritti riservati</span>
+            </div>
+        </footer>
+
+    <script>
+        const feedbackModal = document.getElementById("feedbackModal");
+        const feedbackForm = document.getElementById("feedbackForm");
+        const feedbackStatus = document.getElementById("feedbackStatus");
+        const feedbackSubmit = document.getElementById("feedbackSubmit");
+        const closeFeedback = () => {
+            feedbackModal.classList.add("hidden");
+            feedbackModal.classList.remove("flex");
+            document.body.style.overflow = "";
+        };
+        document.querySelectorAll("[data-feedback-open]").forEach(button => button.addEventListener("click", () => {
+            feedbackModal.classList.remove("hidden");
+            feedbackModal.classList.add("flex");
+            feedbackStatus.textContent = "";
+            document.body.style.overflow = "hidden";
+        }));
+        document.getElementById("closeFeedbackModal").addEventListener("click", closeFeedback);
+        feedbackModal.addEventListener("click", event => {
+            if (event.target === feedbackModal) closeFeedback();
+        });
+        feedbackForm.addEventListener("submit", async event => {
+            event.preventDefault();
+            feedbackSubmit.disabled = true;
+            feedbackSubmit.textContent = "Invio in corso...";
+            feedbackStatus.className = "min-h-5 text-sm text-gray-500";
+            try {
+                const response = await fetch(feedbackForm.action, { method: "POST", body: new FormData(feedbackForm), headers: { Accept: "application/json" } });
+                const result = await response.json();
+                if (!response.ok || !result.success) throw new Error("Invio non riuscito");
+                feedbackStatus.className = "min-h-5 text-sm text-green-700";
+                feedbackStatus.textContent = "Grazie per il feedback!";
+                window.setTimeout(() => { feedbackForm.reset(); feedbackSubmit.disabled = false; feedbackSubmit.textContent = "Invia Feedback"; closeFeedback(); }, 1200);
+            } catch (error) {
+                feedbackStatus.className = "min-h-5 text-sm text-red-700";
+                feedbackStatus.textContent = "Non è stato possibile inviare il feedback. Riprova tra poco.";
+                feedbackSubmit.disabled = false;
+                feedbackSubmit.textContent = "Invia Feedback";
+            }
+        });
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape" && !feedbackModal.classList.contains("hidden")) closeFeedback();
+        });
+
+        // Menu Mobile
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const closeMobileMenu = document.getElementById("closeMobileMenu");
+        const mobileLinks = document.querySelectorAll(".mobile-link");
+        const prodottiContainer = document.getElementById("prodottiContainer");
+        const genereFilters = document.querySelectorAll("[data-genere]");
+        const categoryFilters = document.querySelectorAll("[data-category]");
+        const brandFilters = document.querySelectorAll("[data-brand]");
+        const searchInput = document.getElementById("searchInput");
+        const clearSearch = document.getElementById("clearSearch");
+        const productCount = document.getElementById("productCount");
+        const resetFiltersButton = document.getElementById("resetFilters");
+        const productModal = document.getElementById("productModal");
+        const closeProductModal = document.getElementById("closeProductModal");
+        const modalMainImage = document.getElementById("modalMainImage");
+        let products = [];
+        let selectedGenere = "all";
+        let selectedCategory = "all";
+        let selectedBrand = "all";
+        let searchQuery = "";
+        let modalOpenTimer;
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove("active");
+            mobileMenu.style.transform = "translateX(100%)";
+            mobileMenu.setAttribute("aria-hidden", "true");
+            mobileMenuButton.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
+        };
+        mobileMenuButton.onclick = () => {
+            mobileMenu.classList.add("active");
+            mobileMenu.style.transform = "translateX(0)";
+            mobileMenu.setAttribute("aria-hidden", "false");
+            mobileMenuButton.setAttribute("aria-expanded", "true");
+            document.body.style.overflow = "hidden";
+        };
+        closeMobileMenu.onclick = closeMenu;
+        mobileLinks.forEach(link => link.onclick = closeMenu);
+        const formatPrice = price => `€ ${Number(price).toFixed(2).replace(".", ",")}`;
+        const setActiveFilter = (buttons, activeButton) => {
+            buttons.forEach(button => {
+                button.classList.remove("is-active");
+                button.style.backgroundColor = button.matches(".brand-filter") ? "#ffffff" : "transparent";
+                button.style.color = button.matches(".genere-filter") ? "rgba(255, 255, 255, .7)" : "#1A1A1A";
+            });
+            activeButton.classList.add("is-active");
+            activeButton.style.backgroundColor = "#B8977E";
+            activeButton.style.color = activeButton.matches(".brand-filter") ? "#1A1A1A" : "#ffffff";
+        };
+
+        const productCard = product => {
+            const [primaryImage, hoverImage] = product.immagini || [];
+            const gender = String(product.genere || "").toLowerCase();
+            return `<article class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                ${product.inEvidenza ? '<span class="absolute right-3 top-3 z-10 rounded-full bg-[#B8977E] px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">In Evidenza</span>' : ""}
+                <div class="relative aspect-[4/5] overflow-hidden bg-[#F9F8F6]">
+                    <div data-image-fallback class="image-fallback hidden">
+                        <i class="fas fa-image mb-2 text-2xl" aria-hidden="true"></i>
+                        <span class="px-4 text-[10px] uppercase tracking-wider">Immagine non disponibile</span>
+                    </div>
+                    <img src="${primaryImage || ""}" alt="${product.nome}" class="absolute inset-0 z-[1] h-full w-full object-contain p-2 transition duration-500 ${hoverImage ? "group-hover:opacity-0" : "group-hover:scale-[1.03]"}" loading="lazy" onerror="this.classList.add('hidden'); this.parentElement.querySelector('[data-image-fallback]').classList.remove('hidden');">
+                    ${hoverImage ? `<img src="${hoverImage}" alt="${product.nome}" class="absolute inset-0 z-[2] h-full w-full object-contain p-2 opacity-0 transition duration-500 group-hover:opacity-100" loading="lazy" onerror="this.classList.add('hidden');">` : ""}
+                </div>
+                <div class="flex flex-1 flex-col p-5">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-[#B8977E]">${product.brand}</p>
+                        <span class="rounded-full bg-[#F9F8F6] px-2 py-1 text-[9px] font-semibold uppercase tracking-wider text-gray-500">${gender || "n/d"}</span>
+                    </div>
+                    <h3 class="mt-2 min-h-[3.5rem] line-clamp-2 font-serif text-xl font-bold text-gray-900">${product.nome}</h3>
+                    <p class="mt-3 text-base font-semibold text-gray-900">${formatPrice(product.prezzo)}</p>
+                    <button type="button" data-product-id="${product.id}" class="mt-auto pt-5 text-left text-xs font-semibold uppercase tracking-wider text-[#B8977E] transition hover:text-[#1A1A1A]">Dettagli &amp; Info <i class="fas fa-arrow-right ml-1 text-[10px]" aria-hidden="true"></i></button>
+                </div>
+            </article>`;
+        };
+
+        const renderProducts = () => {
+            const filteredProducts = products.filter(product => {
+                const normalizedSearch = searchQuery.trim().toLowerCase();
+                const searchableText = `${product.nome || ""} ${product.brand || ""}`.toLowerCase();
+                return (selectedGenere === "all" || String(product.genere || "").toLowerCase() === selectedGenere) &&
+                    (selectedCategory === "all" || product.categoria === selectedCategory) &&
+                    (selectedBrand === "all" || product.brand === selectedBrand) &&
+                    (!normalizedSearch || searchableText.includes(normalizedSearch));
+            });
+            productCount.textContent = `Mostrando ${filteredProducts.length} ${filteredProducts.length === 1 ? "prodotto" : "prodotti"}`;
+            prodottiContainer.innerHTML = filteredProducts.length ? filteredProducts.map(productCard).join("") : `<div style="grid-column: 1 / -1;" class="flex min-h-[18rem] flex-col items-center justify-center py-14 text-center">
+                <i class="fas fa-search mb-4 text-2xl text-[#B8977E]" aria-hidden="true"></i>
+                <p class="font-serif text-xl text-gray-900">Nessun capo trovato</p>
+                <p class="mt-2 text-sm text-gray-500">Prova a modificare i filtri o la ricerca.</p>
+                <button type="button" data-empty-reset class="mt-5 rounded-full bg-[#1A1A1A] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-[#B8977E]">Azzera Filtri</button>
+            </div>`;
+            prodottiContainer.querySelectorAll("[data-product-id]").forEach(button => button.addEventListener("click", () => openProductModal(button.dataset.productId)));
+            const emptyReset = prodottiContainer.querySelector("[data-empty-reset]");
+            if (emptyReset) emptyReset.addEventListener("click", resetFilters);
+        };
+
+        const resetFilters = () => {
+            selectedGenere = "all";
+            selectedCategory = "all";
+            selectedBrand = "all";
+            searchQuery = "";
+            searchInput.value = "";
+            clearSearch.classList.add("hidden");
+            clearSearch.classList.remove("flex");
+            setActiveFilter(genereFilters, document.querySelector('[data-genere="all"]'));
+            setActiveFilter(categoryFilters, document.querySelector('[data-category="all"]'));
+            setActiveFilter(brandFilters, document.querySelector('[data-brand="all"]'));
+            renderProducts();
+        };
+
+        const openProductModal = productId => {
+            const product = products.find(item => item.id === productId);
+            if (!product) return;
+            document.getElementById("modalProductBrand").textContent = product.brand;
+            document.getElementById("modalProductGender").textContent = `Genere: ${product.genere || "Non specificato"}`;
+            document.getElementById("modalProductName").textContent = product.nome;
+            document.getElementById("modalProductId").textContent = `Codice articolo: ${product.id}`;
+            document.getElementById("modalProductPrice").textContent = formatPrice(product.prezzo);
+            document.getElementById("modalProductComposition").textContent = product.composizione;
+            document.getElementById("modalProductDescription").textContent = product.descrizione || "";
+            const images = product.immagini || [];
+            const showImage = image => {
+                modalMainImage.src = image;
+                modalMainImage.alt = product.nome;
+            };
+            showImage(images[0] || "");
+            document.getElementById("modalThumbnails").innerHTML = images.map((image, index) => `<button type="button" class="overflow-hidden rounded-lg border-2 ${index === 0 ? "border-[#B8977E]" : "border-transparent"}" data-modal-image="${image}" aria-label="Mostra immagine ${index + 1}"><img src="${image}" alt="" class="aspect-square w-full object-cover"></button>`).join("");
+            document.querySelectorAll("[data-modal-image]").forEach(button => button.addEventListener("click", () => {
+                showImage(button.dataset.modalImage);
+                document.querySelectorAll("[data-modal-image]").forEach(item => item.classList.replace("border-[#B8977E]", "border-transparent"));
+                button.classList.replace("border-transparent", "border-[#B8977E]");
+            }));
+            document.getElementById("modalWhatsapp").href = `https://wa.me/393456413731?text=${encodeURIComponent(`Ciao! Vorrei informazioni sulla disponibilità e sulle taglie del capo ${product.nome} (Codice: ${product.id}).`)}`;
+            productModal.classList.remove("hidden");
+            productModal.classList.add("flex");
+            window.clearTimeout(modalOpenTimer);
+            modalOpenTimer = window.setTimeout(() => productModal.classList.add("is-open"), 20);
+            document.body.style.overflow = "hidden";
+        };
+
+        const closeProductDetails = () => {
+            window.clearTimeout(modalOpenTimer);
+            productModal.classList.remove("is-open");
+            window.setTimeout(() => {
+                if (!productModal.classList.contains("is-open")) {
+                    productModal.classList.add("hidden");
+                    productModal.classList.remove("flex");
+                }
+            }, 220);
+            document.body.style.overflow = "";
+        };
+
+        genereFilters.forEach(button => button.addEventListener("click", () => {
+            selectedGenere = button.dataset.genere;
+            setActiveFilter(genereFilters, button);
+            renderProducts();
+        }));
+        categoryFilters.forEach(button => button.addEventListener("click", () => {
+            selectedCategory = button.dataset.category;
+            setActiveFilter(categoryFilters, button);
+            renderProducts();
+        }));
+        searchInput.addEventListener("input", event => {
+            searchQuery = event.target.value;
+            clearSearch.classList.toggle("hidden", !searchQuery);
+            clearSearch.classList.toggle("flex", Boolean(searchQuery));
+            renderProducts();
+        });
+        clearSearch.addEventListener("click", () => {
+            searchQuery = "";
+            searchInput.value = "";
+            clearSearch.classList.add("hidden");
+            clearSearch.classList.remove("flex");
+            renderProducts();
+            searchInput.focus();
+        });
+        resetFiltersButton.addEventListener("click", resetFilters);
+        brandFilters.forEach(button => button.addEventListener("click", () => {
+            selectedBrand = button.dataset.brand;
+            setActiveFilter(brandFilters, button);
+            renderProducts();
+        }));
+        setActiveFilter(genereFilters, document.querySelector('[data-genere="all"]'));
+        setActiveFilter(categoryFilters, document.querySelector('[data-category="all"]'));
+        setActiveFilter(brandFilters, document.querySelector('[data-brand="all"]'));
+        closeProductModal.addEventListener("click", event => {
+            event.preventDefault();
+            closeProductDetails();
+        });
+        productModal.addEventListener("click", event => { if (event.target === productModal) closeProductDetails(); });
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") {
+                closeMenu();
+                closeProductDetails();
+            }
+        });
+
+        fetch("data/prodotti.json")
+            .then(response => { if (!response.ok) throw new Error("Impossibile caricare il catalogo"); return response.json(); })
+            .then(data => { products = data; renderProducts(); })
+            .catch(() => { prodottiContainer.innerHTML = '<p class="col-span-full py-12 text-center text-sm text-red-700">Il catalogo non è al momento disponibile.</p>'; });
+    </script>
+</body>
+
+</html>
